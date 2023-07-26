@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Created-By: IntelliJ IDEA
-Built-By: wangkaijie
-Build-Jdk: Oracle OpenJDK version 17.0.6
-Implementation-Title: 1-basic-case
-Implementation-Version: 0.0.1-SNAPSHOT
-Implementation-Vendor-Id: top.kjwang
-Main-Class: ${start-class}
-
