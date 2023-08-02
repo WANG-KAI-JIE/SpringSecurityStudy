@@ -1,0 +1,179 @@
+server:
+  port: 8080
+#  servlet:
+#    context-path: /demo
+spring:
+  data:
+    redis:
+      host: localhost
+      # 连接超时时间（记得添加单位，Duration）
+      timeout: 10000ms
+      # Redis默认情况下有16个分片，这里配置具体使用的分片
+      # database: 0
+      lettuce:
+        pool:
+          # 连接池最大连接数（使用负值表示没有限制） 默认 8
+          max-active: 8
+          # 连接池最大阻塞等待时间（使用负值表示没有限制） 默认 -1
+          max-wait: -1ms
+          # 连接池中的最大空闲连接 默认 8
+          max-idle: 8
+          # 连接池中的最小空闲连接 默认 0
+          min-idle: 0
+      password: 123456
+  # session 简单配置
+  session:
+    # session 存储模式设置, 要导入相应的 spring-session 类的依赖, 默认为 none, 分布式应用把 session 放入 redis 等中间件
+    store-type: none
+    # session 过期时间
+    timeout: PT300s
+#debug: true
+justauth:
+  cache:
+    type: default
+  enabled: true
+  type:
+    # 码云登录
+    GITEE:
+      # 客户端ID
+      client-id: d509b4d2785d5a03dada66d14408a55a037d924337a1fb77374835db6d584773
+      # 客户端密码
+      client-secret: a65b4ef3e434eed950b25c959d572df897b5ec517efe82d9d27fe6c4573819f3
+      # 回调地址
+      redirect-uri:  http://localhost:8080/oauth/gitee/callback
+    GITHUB:
+      # 客户端ID
+      client-id: dcdb1b4a074a8edcb366
+      # 客户端密码
+      client-secret: 5252c3aac05673e5cc5246b1a9b4456416c2086c
+      # 回调地址
+      redirect-uri: http://localhost:8080/oauth/github/callback
+    DINGTALK:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/dingtalk/callback
+    BAIDU:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/baidu/callback
+    CSDN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/csdn/callback
+    CODING:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/coding/callback
+    OSCHINA:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/oschina/callback
+    ALIPAY:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/alipay/callback
+      alipay-public-key: MIIB**************DAQAB
+    WECHAT_OPEN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/wechat_open/callback
+    WECHAT_MP:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/wechat_mp/callback
+    WECHAT_ENTERPRISE:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/wechat_enterprise/callback
+      agent-id: 1000002
+    TAOBAO:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/taobao/callback
+    GOOGLE:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/google/callback
+    FACEBOOK:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/facebook/callback
+    DOUYIN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/douyin/callback
+    LINKEDIN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/linkedin/callback
+    MICROSOFT:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/microsoft/callback
+    MI:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/mi/callback
+    TOUTIAO:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/toutiao/callback
+    TEAMBITION:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/teambition/callback
+    RENREN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/renren/callback
+    PINTEREST:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/pinterest/callback
+    STACK_OVERFLOW:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/stack_overflow/callback
+      stack-overflow-key: asd*********asd
+    HUAWEI:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/huawei/callback
+    KUJIALE:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/kujiale/callback
+    GITLAB:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/gitlab/callback
+    MEITUAN:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/meituan/callback
+    ELEME:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/eleme/callback
+    TWITTER:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/twitter/callback
+    XMLY:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/xmly/callback
+      # 设备唯一标识 ID
+      device-id: xxxxxxxxxxxxxx
+      # 客户端操作系统类型，1-iOS系统，2-Android系统，3-Web
+      client-os-type: 3
+      # 客户端包名，如果 clientOsType 为1或2时必填。对 Android 客户端是包名，对 iOS 客户端是 Bundle ID
+      # pack-id: xxxx
+    FEISHU:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/feishu/callback
+    JD:
+      client-id: 10**********6
+      client-secret: 1f7d08**********5b7**********29e
+      redirect-uri: http://localhost:8080/oauth/jd/callback
