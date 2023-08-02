@@ -1,0 +1,10 @@
+spring:
+  session:
+    timeout: 2H
+  application:
+    name: auth-cloud-server
+  data:
+    redis:
+      password: '123456'
+server:
+  port: 9000
