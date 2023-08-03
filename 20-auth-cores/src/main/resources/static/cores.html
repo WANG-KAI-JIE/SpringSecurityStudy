@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to Spring Security!</title>
+    <meta charset="UTF-8" />
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function sub() {
+            $.ajax({
+                url: "http://localhost:8080/cors",
+                type: "GET",
+                success: (data) => {
+                    alert("success：" + data);
+                },
+                error: (data) => {
+                    alert("error" + data);
+                },
+            });
+        }
+    </script>
+</head>
+<body>
+<button onclick="sub() " type="button">测试跨域</button>
+</body>
+</html>
